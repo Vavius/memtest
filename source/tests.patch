@@ -1,0 +1,167 @@
+--- tests.c.orig	2006-01-13 12:22:32.976820000 -0800
++++ tests.c	2006-01-13 12:39:54.585696000 -0800
+@@ -56,19 +56,19 @@
+     unsigned int j;
+     size_t i;
+ 
+-	printf("           ");
++	printf("              ");
+     fflush(stdout);
+     for (j = 0; j < 16; j++)
+ 	{
+-	    printf("\b\b\b\b\b\b\b\b\b\b\b");
+-        printf("setting %3u", j);
++	    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
++        printf("setting %3u/16", j);
+         fflush(stdout);
+         for (i = 0; i < count; i++)
+ 		{
+             buf[i] = ((j + i) % 2) == 0 ? (ul) &buf[i] : ~((ul) &buf[i]);
+         }
+-        printf("\b\b\b\b\b\b\b\b\b\b\b");
+-        printf("testing %3u", j);
++        printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
++        printf("testing %3u/16", j);
+         fflush(stdout);
+         for (i = 0; i < count; i++)
+ 		{
+@@ -87,7 +87,7 @@
+             }
+         }
+     }
+-    printf("\b\b\b\b\b\b\b\b\b\b\b           \b\b\b\b\b\b\b\b\b\b\b");
++    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b              \b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+     fflush(stdout);
+     return 0;
+ }
+@@ -214,27 +214,27 @@
+     ul q;
+     size_t i;
+ 
+-	printf("           ");
++	printf("              ");
+     fflush(stdout);
+     for (j = 0; j < 64; j++)
+ 	{
+-	    printf("\b\b\b\b\b\b\b\b\b\b\b");
++	    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+         q = (j % 2) == 0 ? UL_ONEBITS : 0;
+-        printf("setting %3u", j);
++        printf("setting %3u/64", j);
+         fflush(stdout);
+         for (i = 0; i < count; i++)
+ 		{
+             bufa[i] = bufb[i] = (i % 2) == 0 ? q : ~q;
+         }
+-        printf("\b\b\b\b\b\b\b\b\b\b\b");
+-        printf("testing %3u", j);
++        printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
++        printf("testing %3u/64", j);
+         fflush(stdout);
+         if (compare_regions(bufa, bufb, count))
+ 		{
+             return -1;
+         }
+     }
+-    printf("\b\b\b\b\b\b\b\b\b\b\b           \b\b\b\b\b\b\b\b\b\b\b");
++    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b              \b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+     fflush(stdout);
+     return 0;
+ }
+@@ -245,27 +245,27 @@
+     ul q;
+     size_t i;
+ 
+-	printf("           ");
++	printf("              ");
+     fflush(stdout);
+     for (j = 0; j < 64; j++)
+ 	{
+-	    printf("\b\b\b\b\b\b\b\b\b\b\b");
++	    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+         q = (j % 2) == 0 ? CHECKERBOARD1 : CHECKERBOARD2;
+-        printf("setting %3u", j);
++        printf("setting %3u/64", j);
+         fflush(stdout);
+         for (i = 0; i < count; i++)
+ 		{
+             bufa[i] = bufb[i] = (i % 2) == 0 ? q : ~q;
+         }
+-        printf("\b\b\b\b\b\b\b\b\b\b\b");
+-        printf("testing %3u", j);
++        printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
++        printf("testing %3u/64", j);
+         fflush(stdout);
+         if (compare_regions(bufa, bufb, count))
+ 		{
+             return -1;
+         }
+     }
+-    printf("\b\b\b\b\b\b\b\b\b\b\b           \b\b\b\b\b\b\b\b\b\b\b");
++    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b              \b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+     fflush(stdout);
+     return 0;
+ }
+@@ -275,26 +275,26 @@
+     unsigned int j;
+     size_t i;
+ 
+-	printf("           ");
++	printf("               ");
+     fflush(stdout);
+     for (j = 0; j < 256; j++)
+ 	{
+-	    printf("\b\b\b\b\b\b\b\b\b\b\b");
+-        printf("setting %3u", j);
++	    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
++        printf("setting %3u/256", j);
+         fflush(stdout);
+         for (i = 0; i < count; i++)
+ 		{
+             bufa[i] = bufb[i] = (ul) UL_BYTE(j);
+         }
+-        printf("\b\b\b\b\b\b\b\b\b\b\b");
+-        printf("testing %3u", j);
++        printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
++        printf("testing %3u/256", j);
+         fflush(stdout);
+         if (compare_regions(bufa, bufb, count))
+ 		{
+             return -1;
+         }
+     }
+-    printf("\b\b\b\b\b\b\b\b\b\b\b           \b\b\b\b\b\b\b\b\b\b\b");
++    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b               \b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+     fflush(stdout);
+     return 0;
+ }
+@@ -308,8 +308,8 @@
+     fflush(stdout);
+     for (j = 0; j < 64; j++)
+ 	{
+-	    printf("\b\b\b\b\b\b\b\b\b\b\b");
+-        printf("setting %3u", j);
++	    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
++        printf("setting %3u/64", j);
+         fflush(stdout);
+         for (i = 0; i < count; i++)
+ 		{
+@@ -321,15 +321,15 @@
+                 bufa[i] = bufb[i] = 0x00000001 << (UL_LEN * 2 - j - 1);
+             }
+         }
+-        printf("\b\b\b\b\b\b\b\b\b\b\b");
+-        printf("testing %3u", j);
++        printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
++        printf("testing %3u/64", j);
+         fflush(stdout);
+         if (compare_regions(bufa, bufb, count))
+ 		{
+             return -1;
+         }
+     }
+-    printf("\b\b\b\b\b\b\b\b\b\b\b           \b\b\b\b\b\b\b\b\b\b\b");
++    printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b              \b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+     fflush(stdout);
+     return 0;
+ }

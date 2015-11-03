@@ -1,0 +1,45 @@
+Version 4.04M  (Macintosh port of memtester 4.0.4)
+05 September 2004 Tony Scaminaci
+
+  - Changed memory reduction algorithm for single-user mode
+    from a fixed 17M to a percentage (2.3%) of installed memory
+    in order to eliminate lock-ups of the Darwin kernel
+
+  - made memtester's exit code meaningful.  See the manpage for its meaning.
+    Thanks to Wurzel Parsons-Keir, who sent a patch for the code, so I only had
+    to document it (Charles).
+
+
+Version 4.03M (Macintosh port of memtester 4.0.3)
+28 August 2004 Tony Scaminaci
+
+  - ported version 4.0.3 to MacOS X and added functionality
+    to enable operation in single-user mode
+
+Version 4.0.3
+10 August 2004
+
+  -small changes to enable building with dietlibc and a few other environments
+  that don't even attempt to provide the various Posix definitions.
+  -cosmetic fixes to output.
+  -restore the reduce-and-retry loop of memory locking from version 2.
+
+Version 4.0.2
+9 August 2004
+
+  -add manpage
+
+Version 4.0.1
+8 August 2004
+
+  -fix cosmetic bugs in output
+
+Version 4.0.0
+7 August 2004
+
+  -rewrite to clean up the code (previously an ugly hack), for 64-bit
+  cleanliness
+  -change build system to build on (hopefully) any platform.  Previous
+  versions required hackery on some systems.
+
+Version 3 not publicly released.

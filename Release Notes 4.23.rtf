@@ -1,0 +1,396 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww20000\viewh14580\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\f0\fs24 \cf0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640
+
+\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+\cf0 MEMTEST RELEASE NOTES\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\b0 \cf0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+Version 4.23 - 11/2/2014\
+\
+SUPPORTED OS VERSIONS AND MACHINES\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 MacOS X 10.7 (Lion), 10.8 (Mountain Lion), 10.9 (Mavericks),  and 10.10 (Yosemite), Intel-based 32-bit and 64-bit machines only. For PowerPC-based Macs, use version 4.22.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+NEW FEATURES\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Added a new command-line help switch, \'93-h\'94 which prints standard unix-style help and information about the available command-line options.
+\i\b \
+\
+BUG FIXES\
+
+\i0\b0 \
+Changed old-style OS calls to new calls compatible with the latest versions of Xcode. The old-style calls were no longer supported by Xcode and were preventing compilation from completing.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 ENHANCEMENTS
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Updated for full compatibility with all operating system versions beyond those supported by version 4.22. Improved error reporting and other command line cosmetic improvements.\
+\
+The \'93quick\'94 option introduced in version 4.21 has been improved considerably over the previous two releases. Memtest running in \'93quick\'94 mode completes in 1/3 of the time required to run a full test.
+\i\b \
+\
+BUILD NOTES\
+\
+
+\i0\b0 The project file has been updated to Xcode 6.1 under MacOS X Yosemite and is not compatible with earlier versions of Xcode. You must be running MacOS X 10.10 or later and Xcode 6.1 or later to build this project.
+\i\b \
+\
+
+\i0\b0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.22 - 5/24/2008\
+\
+SUPPORTED OS VERSIONS AND MACHINES\
+\
+
+\i0\b0 MacOS X 10.3 (Panther), 10.4 (Tiger), 10.5 (Leopard), and 10.6 (Snow Leopard) running on Intel and PowerPC 32-bit and 64-bit machines.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+NEW FEATURES\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 None.
+\i\b \
+\
+BUG FIXES\
+
+\i0\b0 \
+KERN_SECURELVL returns 0 in multiuser mode under Leopard so this selector is no longer valid for determining whether we're in single user mode. For OS versions 10.5 and later, the sysctlbyname function is used with parameter "kern.singleuser" to determine the operating mode. For OS versions earlier than 10.5, the old method using sysctl and KERN_SECURELVL is retained because the kern.singleuser parameter is not available.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 ENHANCEMENTS
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 None.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.21 - 8/25/2007\
+\
+NEW FEATURES\
+\
+
+\i0\b0 A new command line switch 
+\b quick
+\b0  enables slightly faster run times with minimal loss of accuracy. There have been many requests for a faster way to test large amounts of installed ram so the 
+\b quick
+\b0  switch is a first attempt at decreasing the total run time. This feature is currently under development and the initial improvement isn't as great as I had hoped for. Future releases will shorten run times significantly.
+\i\b \
+\
+BUG FIXES\
+\
+
+\i0\b0 None.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 ENHANCEMENTS
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 When the user requests that a log file be written to disk, memtest now reports the full unix path to the log file in the header messages. This removes the ambiguity as to what directory the log file is being written.
+\i\b \
+\
+
+\i0\b0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.2 - 10/21/2006\
+\
+NEW FEATURES\
+\
+
+\i0\b0 A new test, Linear PRN, has been added to the suite following the stuck address test. This test fills the entire memory space with non-repeating psuedorandom (PRN) data generated by a 63-stage maximal-length linear feedback shift register (ML-LFSR). The generator produces a unique set of PRN data for each run by using the Mac's internal clock to initialize the shift register. Since the current date and time never repeat, a different set of random data is guaranteed for each run of this test. The test is run 16 times, each time with a different starting pattern. Because of the extremely large number of unique data patterns in a 63-stage ML-LFSR (2^63 - 1), the patterns will never repeat for any practical amount of installed memory. Hopefully, this test will weed out certain intermittent memory problems much earlier in the test run.\
+\
+The full suite of tests are now timed and Memtest reports the total run time upon completion. Memtest also reports the version and build number of the currently running operating system.
+\i\b \
+\
+BUG FIXES\
+\
+
+\i0\b0 None.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 ENHANCEMENTS
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 An intelligent command-line parser has been added in order to reduce reliance on the order of arguments. For example, the "all" and "-L" options may now be entered in any order with respect to each other or the numerical command line arguments. When numerical arguments are specified, Memtest will interpret the first number as the amount of memory to test and the second number as the number of test passes to run. There is also more error checking and reporting for the command line arguments to assist users who are unfamiliar with unix style commands. The parser is not completely foolproof but should simplify usage for the vast majority of people.\
+\
+The test suite is now split into two sections - tests that runs linearly over the total the entire allocated test space, and tests that run as comparisons between the split memory buffers A and B. The stuck address and linear PRN tests run over the entire allocated memory while the remaining tests are run by comparing buffer A against buffer B using half the allocated memory for each buffer. Future test additions will be always be categorized into one of these two sections.\
+\
+Test failures are now reported using local addresses rather than offset addresses as in previous releases. This was done for consistency across the test suite. Note that local addresses are 
+\i\b not 
+\i0\b0 absolute physical addresses so they still don't correlate directly to specific DIMMs. However, use of of local addresses throughout the program will make it easier to eventually correlate these to physical addresses in a future release.\
+\
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.14 - Original release date: 9/13/2006, re-released on 10/1/2006 for installer/documentation changes.\
+\
+BUG FIXES\
+\
+
+\i0\b0 Use of Apple's package installer has been discontinued due to unknown error messages being generated by the installer under certain conditions. The user now can simply drag the memtest folder into the Applications folder on the boot drive. Although the memtest folder does not specifically need to reside in the Applications folder, I recommend this location as the safest. Note that the paths shown in the User's Guide assume that the memtest folder is located in the Applications directory on the boot drive (/Applications/memtest) so placing the folder elsewhere invalidates the paths shown in the User's Guide.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 ENHANCEMENTS
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Added support for the x86_64 architecture (Mac Pro Xeon systems). Memtest is now a 4-architecture universal binary.
+\i\b \
+\
+
+\i0\b0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.13 - 2/12/2006\
+\
+BUG FIXES\
+\
+
+\i0\b0 Corrected compiler setting for backwards compatibility with Jaguar (10.2.8). \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 ENHANCEMENTS
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Memtest is now distributed as a single universal binary (one combined executable program for all platforms). Supported hardware platforms include PPC G3, G4, and G5 systems as well as the Intel-based Macs. MacOS X versions supported include 10.2.8 through 10.4.x. Many thanks to Helaman Ferguson for his adjustments to the XCode project file which enabled the building of memtest in Apple's new universal binary format.\
+\
+A few compiler adjustments were made resulting in a slight improvement in execution speed over the previous release. Also, the runtime status reporting has been improved for the longer tests so that the progress of each test is clear. Thanks to Robert Minsk for his contributions to this effort. \
+\
+The User's Guide has been improved. Specifications for each of the valid command-line arguments are now included. Also, recommendations for isolating defective DIMMs are provided.
+\i\b \
+\
+
+\i0\b0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.12 - 11/23/2005\
+\
+BUG FIXES\
+\
+
+\i0\b0 Version 4.12 adds support for the capital "-L" option to enable logging to a disk file as previously documented in the User's Guide. Version 4.11 only supported the lower-case "-l" option due to an inadvertent coding error. Also removed a nested kernel-level function call that is no longer supported as of XCode 2.2.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 ENHANCEMENTS
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Memtest may now be run from the Finder as a double-clickable application. It will open a terminal window and run with the default options set to test all available free memory in a single pass, and no log file will be written. If invoked from the command line without arguments, memtest will run with these same set of options. This enhancement is meant to simplify the program for users without command line experience. However, memtest is best run directly from the command line using the arguments as specified in the User's Guide.
+\i\b \
+\
+
+\i0\b0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.11 - 7/30/2005\
+\
+BUG FIXES\
+\
+
+\i0\b0 Memtest 4.11 corrects a bug in which G5-based systems running Tiger (64-bit mode) were incorrectly calculating a huge amount of free memory as being available for testing. Apple traced this bug to a defective Darwin system call in libc that was returning the wrong 64-bit value for the page size on these systems. Instead of the upper 32-bits of this value being zero, the host_page_size() function would set both the lower and upper 32-bits to the page size, causing the free memory calculation to be orders of magnitude larger than was actually the case. Version 4.11 now uses the libc global variable vm_page_size which contains the correct 64-bit value for the page size on affected systems.\
+\
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.10 - 5/28/2005\
+\
+ENHANCEMENTS
+\i0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Memtest version 4.10 is now built as an XCode 2 project under MacOS X 10.4 (Tiger) and has been compiled using gcc 4.0. Starting with this release, memtest is distributed as a fat binary, similar to those that were common during the transition from 68K-based Macs to the PPC-based systems. There are three binaries compiled into the memtest executable file, each optimized for a different family of PPC processors. One binary is optimized for the older G3 processors, the second binary is optimized for the PPC 74xx (G4) family, and the third binary is optimized for the G5 processors. The correct binary for your processor is invoked automatically by the operating system when you launch memtest. Beyond the benefit of better tailoring of the executable code to each individual CPU type, the fat binary offers another important advantage for G5 systems running Tiger, that of 64-bit execution.\
+\
+Memtest is now a 64-bit application. Portions of memtest were already 64-bit ready thanks to Charles' 4.x rewrite and much of the remaining code has been modified to support 64-bit execution. One major benefit of 64-bit execution is the ability to test more than 4 GB of installed memory which has become important with the release of Tiger. G5-based Macs running Tiger or later can now test up to the full amount of memory supported by the OS, currently 8 GB for PowerMac G5 systems and 16 GB for XServe G5 systems. I'm counting on user feedback and bug reports more than ever during this transition so please help by opening bug reports in the Bugzilla section of the memtestosx site or by sending me email via the site.\
+\
+Memtest is now distributed as a MacOS X installer package and is installed automatically in the Applications folder on your boot volume. Of course, you're still free to move the installed folder anywhere you want. The memtest folder has also been cleaned up and reorganized. The executable file remains where it always has been, directly under the top-level folder.
+\i\b \
+\
+BUG FIXES
+\i0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 In single-user mode, the file system is mounted read-only by the Darwin kernel. This was preventing the log file from being written when the user invoked the logging option (-l). Memtest now automatically mounts the file system as read/write if the user chooses the logging option. 
+\b WARNING: The file system remains writable after memtest completes.
+\b0  Since you are  logged in with root privileges, be careful what you do. You should only type "halt" to shut down the system or "reboot" to go back to multiuser mode. Tiger offers a new option to boot into a single-user shell environment but I don't recommend doing this. Although it mounts the file system read/write, this shell eats up a considerable amount of  memory, reducing the amount available for testing.\
+\
+The log file was not capturing error messages being generated by individual tests. Also, the user could not Ctrl-C during a running test without losing all of the logged test results because the write buffer wasn't being flushed to disk often enough. The log file now duplicates virtually everything the user sees on the screen and fixes both of the previous problems as well.\
+\
+The error codes that were being printed when a test failure occurred were not user-friendly to say the least. I have eliminated the numerical error codes and replaced them with somewhat more meaningful text messages.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 In rare cases, machines with more than 1GB of installed memory were locking up in single-user mode due to the memory reduction being insufficient. I've changed the reduction to 2.8% of the available free memory in an attempt to alleviate this problem. Please report any kernel lockups in single-user mode or if warnings appear about the memory manager not being present.\
+\
+Changes have been made to the routines that determine how much free memory is available in order to alleviate a problem where a user with more than 4 GB of installed ram was getting horrendous numbers of errors. Thanks to Robert Minsk for suggesting and implementing these changes.\
+\
+A change was made to the method of allocating and locking memory. Previously, if the user did not have admin privileges, memory locking could fail outright. Memtest will now continue with the memory unlocked so that users with insufficient privileges can still test as much memory as can be allocated. Thanks to Dan Bradley for suggesting and testing this change in the current version of memtester for Linux.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 KNOWN ISSUES
+\i0\b0 \
+\
+The Darwin kernel limits the amount of memory that can be allocated for the test buffer to about 2 GB under Panther, even when running on G5-based Macs. If you're running Panther or an older version of OS X, you won't be able to test more than 2 GB with one instance of memtest running. As always, you can invoke multiple memtest runs simultaneously to test more than 2 GB. Whether this limitation is gone with Tiger running on G5 processors remains to be seen.\
+\
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.05M - 1/9/2005
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Corrected bogus "All tests passed" message when one or more tests actually failed during the run. Memtest will now report pass/fail results with the appropriate message at the end of the run.\
+\
+Reinstated the "-l" option to log test results to the default "memtest.log" file. The log file will be created in the current working directory (the directory from which memtest was launched). The "-l" option must be specified as the 4th argument on the command line. For example:\
+\
+PowerMacG4:~ tony$
+\b   /Applications/memtest-4.05M/memtest all 1 -l
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 In this example, memtest was invoked while in the "tony" home directory, so the log file will be written to the "tony" directory. You must have write permissions to the working directory in order for the log file to be created.\
+\
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.04M - 9/5/2004
+\i0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Changed the memory reduction algorithm for single-user mode to be more robust. Rather than subtracting off a fixed number of MB in single-user mode, I'm now subtracting off a fixed percentage (2.3%) of the available free memory. This percentage is slightly above the necessary reductions reported by a number of users running 4.03M and will prevent kernel lock-ups in single-user mode.\
+\
+Changes implemented in memtester 4.0.4 have been incorporated into this release.\
+\
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+Version 4.03M - 8/28/2004
+\i0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 This is a complete rewrite of the memtest application by the original author, Charles Cazabon. Thanks to his efforts, and coupled with my MacOS X-specific modifications and enhancements, memtest now runs in MacOS X's single-user mode where nearly all of the installed ram is available for testing. Operation in single-user mode is a feature that I've wanted to add for a long time and thanks to Charles's efforts to improve the commonality of the source code across multiple platforms, OS X users can finally test nearly all of the installed memory in their machines. Typically, all but about 60M of the installed ram can be tested in single-user mode.\
+\
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\i0 \cf0 VERSION 2 RELEASE NOTES
+\i \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+Version 2.95 - 2/15/2004
+\i0\b0 \
+
+\i\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Corrected problem with a missing _strsignal function under Jaguar:\
+	- added missing prototype for strsignal function in memtest.c\
+	- recompiled using "make bsd"
+\i\b \
+\
+Version 2.94 - 1/31/2004
+\i0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 This release implements a major bug fix and enhances the performance of memtest.\
+\
+The option to test all available memory (e.g. 
+\i ./memtest all
+\i0 ) now works correctly, reserving all available real memory for testing. The user no longer needs to run "top" to determine the amount of free memory that is available for testing. In version 2.93-1, use of the "all" option caused both real and virtual memory locking to be attempted, resulting in excessive paging, and rendering the machine nearly unusable. This was an unfortunate consequence of a feature that worked correctly under linux but does not work properly under the Darwin kernel which comprises MacOS X.\
+\
+Runtime performance has been improved by 20-30% over that of version 2.93-1 through the use of a compiler optimization in the Makefile.
+\i\b \
+\
+Version 2.93-1\
+
+\i0\b0 \
+This is my re-release of Charles Cazabon's original distribution for various Unix systems. I was unable to build his source code under Jaguar because the files 
+\i strsignal.c
+\i0  and 
+\i snprintf.c
+\i0  aren't part of Apple's BSD distribution. I pulled down these two files from a BSD site and made a few minor modifications to the function calls in 
+\i strsignal.c 
+\i0 in order to build the release. The compiled utility, 
+\i \ul memtest,\ulnone  
+\i0 is included in the release directory and is ready to use.
+\b \
+}

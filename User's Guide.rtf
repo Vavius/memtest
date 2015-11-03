@@ -1,0 +1,319 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww17980\viewh15800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\f0\fs24 \cf0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\b \
+
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\b \cf0 ABOUT MEMTEST OSX
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+Memtest OS X is a command-line based ram-testing utility for Macintosh computers and is licensed under the Gnu Public License version 2 (GPL2). It is therefore free software in the strictest sense of the GPL. The fee charged to download memtest is used to defer the costs of running the memtestosx.org web site and to motivate me, the maintainer, to make significant improvements to the program for the benefit of the global Macintosh community. Please support this ongoing project by acquiring it through the memtestosx.org web site. Thank you!\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\b \
+
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\b \cf0 INSTALLATION
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+Memtest is distributed as an encrypted MacOS X disk image file. A small download fee provides the user with an unlock code for the DMG file. When the image file is opened, Disk Utility will prompt for the decryption code which is sent to each user via email upon completion of their download transaction. The decryption string must be typed in manually and case-correct because Apple does not currently support cut and paste into the decryption text box of DMG files.\
+\
+The decoded image file contains the memtest folder which may be dragged to any location on the user's drive. It is strongly recommended that this folder be dragged to the Applications folder on the boot drive. This is the location Apple prefers all applications to reside in and the instructions in this guide assume that the user has placed the memtest folder in the boot volume's Applications folder. If you decide to place the memtest folder elsewhere, be aware that the pathnames will be different than shown in this guide. 
+\i\b \
+\
+
+\i0\b0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\i\b \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\i0 \cf0 RUNNING MEMTEST
+\i \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 Memtest is best run in OS X's single-user mode. In this mode, nearly all of the installed ram can be tested whereas under the full OS, a considerable portion of memory is tied up by OS X processes and the Quartz window manager. Running memtest in single-user mode maximizes the effectiveness of the memory test.\
+\
+To boot into single-user mode, hold down the "Command" and "S" keys during startup. You will be automatically logged in as the user 
+\i\b root
+\i0\b0  with a minimal command line environment. The login directory for the root account is "/" which is the top-level directory of the boot volume. Assuming that the memtest folder resides in your Applications folder, a typical invocation of memtest would be the following:\
+\
+>
+\b   /Applications/memtest/memtest all 3 -L <RETURN>	(
+\b0  <RETURN> means press the Return key)
+\b \
+
+\b0 \
+This would run three passes of the test suite, testing all available free memory. The "-L" switch instructs memtest to save the transcript of the run to a file named "memtest.log" within the working directory from which you invoked memtest (also known as the current working directory). Under the full OS, launching a terminal window sets the working directory to 
+\b /Users/
+\i login_name
+\b0  
+\i0 where 
+\i\b login_name
+\i0\b0  is the account name you logged in with. Note that when running in single-user mode, you are automatically logged in as the "root" user so the default current working directory is /private/var/root. The main thing to remember is that the memtest.log file is always saved in the current working directory which is the same thing as the login directory unless the user manually changes to a different working directory.\
+\
+Alternatively, you can 
+\i\b cd  
+\i0\b0 into the memtest folder and run the program using the command\
+\
+>
+\b   ./memtest all 3 -L <RETURN> 	(
+\b0 Don't forget the period before the forward slash!)\
+\
+I recommend running at least 3 to 5 passes to obtain the best test coverage of marginal or intermittently failing DIMMs.\
+\
+To test less than all of the available free memory, replace the 
+\b all 
+\b0 option with the number of megabytes to test (e.g. 10, 100, 512, etc). The number entered is assumed to be in MB. For example, the command,\
+\
+>
+\b   /Applications/memtest/memtest 1150 3 -L <RETURN>\
+\
+
+\b0 will test 1150 MB of the installed memory assuming this much is available for testing.\
+\
+Memtest can also be run from a terminal window in a fully-booted OS X environment (multiuser mode). However, considerably less memory will be free for testing making the results less reliable. Double clicking the memtest icon in the Finder will launch the program with a set of defaults designed to test all available memory in a single pass. Memtest can be immediately terminated at any time by typing the Ctrl-C key combination. This is the standard unix command for quitting programs run from the command line. Note that this key combo also works when memtest is launched from the Finder as long as the key combo is pressed while the terminal window is the frontmost window.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\b \cf0 VALID COMMAND-LINE ARGUMENTS\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\b0 \cf0 Memtest accepts up to 4 command-line arguments (options) after the word 
+\i\b memtest
+\i0\b0 . As of version 4.2, the order of the arguments is less important with a couple of notable exceptions.\
+\
+>
+\b   /Applications/memtest/memtest arg1 arg2 arg3 arg4 <RETURN>\
+\
+
+\b0 Valid command line keywords include:
+\b \
+\
+	-h          :  
+\b0 Print version and help for available command line options
+\b \
+	all         :  
+\b0 Test all memory (position independent argument)
+\b \
+	quick   :  
+\b0 Run an abbreviated set of tests (faster testing, position independent argument)
+\b \
+	-l 
+\b0 or
+\b  -L  :  
+\b0 Write out a log file to disk (position independent argument)
+\b \
+\
+arg1
+\i : 
+\i0\b0 The amount of memory to be tested in megabytes. If 
+\b arg1
+\b0  is omitted, the default value is assumed to be 
+\b all
+\b0  which tests all available free memory. Valid values for 
+\b arg1
+\b0  are 
+\b all
+\b0  and 
+\b any integer 
+\b0 specifying the number of megabytes to test. If this number exceeds the currently available amount of free memory, the value will default to 
+\b all
+\b0 . Note that if 
+\b arg1
+\b0  is omitted, 
+\b arg2 
+\b0 or
+\b  arg3 
+\b0 if numeric, will be interpreted as the number of megabytes to be tested. In fact, the first numeric argument provided will be interpreted as the number of megabytes to be tested unless 
+\b all
+\b0  has been specified in some position. 
+\b NOTE:
+\b0  In version 4.2 and later, the word 
+\b all
+\b0  is now independent of its position in the command line argument list.\
+\
+
+\b arg2
+\i : 
+\i0\b0 The number of test passes to run. If 
+\b arg2
+\b0  is omitted, the default value is assumed to be 
+\b 1
+\b0  which runs a single pass of the test suite. Valid values for 
+\b arg2 
+\b0 are 
+\b 1
+\b0  
+\b - 255 
+\b0 passes.\
+\
+
+\b arg3
+\i : 
+\i0\b0 Specifies whether a transcript of test results should be written to a logfile named "memtest.log" in the current working directory. If 
+\b arg3
+\b0  is omitted, file logging is disabled. Valid values for 
+\b arg3 
+\b0 are 
+\b -l 
+\b0 and
+\b  -L 
+\b0 (lower and upper-case "els"). 
+\b NOTE:
+\b0  In version 4.2 and later, the log file specifier 
+\b -l
+\b0  or 
+\b -L
+\b0  is
+\b  
+\b0 now independent of its position in the command line argument list.\
+\
+
+\b arg4
+\i : 
+\i0\b0 Specifies whether memtest should run an abbreviated set of tests using the 
+\b quick
+\b0  keyword. The 
+\b quick
+\b0  specifier can be located in any argument position on the command line. If 
+\b quick
+\b0  is not found in the command line, the full set of tests are run.\
+\
+An intelligent command-line parser reduces the importance of the order of arguments. For example, the "all", "-L", and "quick" options may be entered in any order with respect to each other or the numerical command line arguments. Note that when numerical arguments are specified, Memtest will interpret the first number as the amount of memory to test and the second number as the number of test passes to run. There is also more error checking and reporting of the command line arguments to assist users who are unfamiliar with unix style commands. The parser is not bullet-proof but it simplifies usage for the vast majority of people.\
+\
+Here are some examples of equivalent command lines:\
+\
+$ /Applications/memtest/memtest -L all 3       use log file, test all memory, run 3 passes\
+$ /Applications/memtest/memtest all -L 3       use log file, test all memory, run 3 passes\
+$ /Applications/memtest/memtest -L all 3       use log file, test all memory, run 3 pass\
+\
+Other examples of valid command lines are:\
+\
+$ /Applications/memtest/memtest                    no arguments specify testing of all memory, run 1 pass, no log file (default modes)\
+$ /Applications/memtest/memtest all 3           test all memory, run 3 passes, no logfile\
+$ /Applications/memtest/memtest 3                test 3M of memory, run 1 pass, no log file\
+$ /Applications/memtest/memtest -L 100 4   test 100M of memory, run 4 passes, use log file\
+$ /Applications/memtest/memtest  quick       run an abbreviated set of tests on all memory, 1 pass, no log file\
+
+\b \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+\cf0 TIPS FOR ISOLATING DEFECTIVE DIMMS\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\b0 \cf0 Memtest currently does not have the ability to isolate which DIMM or DIMMs are marginal or defective when the test results report a failure. This feature is planned for a future release. For now, the best way to isolate the offending DIMM(s) is to use a binary search methodology. This is an algorithm which is popular in many sorting routines and can lead to the discovery of a defective DIMM in a minimal number of swap/test sequences. \
+\
+When memtest reports one or more failures, the first step in isolating the offending DIMMs is to remove half of them and then rerun memtest. If there are no failures, then the suspect DIMMs are the ones that were removed. If failures are still reported, then one or more of the still-installed DIMMs are bad.\
+\
+If the failures are in the still-installed DIMMs, again remove half of them and retest. If the failure are gone, then swap the installed half for the removed half and retest. Each time a test is run, either cut the number of installed DIMMs in half (for a failure) or swap the installed DIMMs for the removed ones (no failure) until the minimal number of DIMMs are installed (e.g., one pair in the G5 systems). Once you're down to the minimal installation, put back in all of the now known good DIMMs and swap one of the remaining suspects out for the next test. Under normal circumstances, you should be able to isolate the failing DIMMs in just a few swap/test cycles.\
+\
+There are many other reasons DIMMs can appear to be bad. Sometimes, a defective DIMM socket is the culprit and simply not using that socket solves the problem. Problems can also arise from mixing and matching different brands of DIMMs, especially if they aren't all rated with the same timing specs. It's even possible that the motherboard CPU caches may be bad and the fault doesn't lie with the DIMMs at all. Suspect the CPU caches if the tests pass in single-user mode but fail in a terminal window under the full OS. The CPU caches are turned off in single-user mode and are therefore not part of the memory test, whereas the caches are in the test path under full OS operation.\
+
+\b \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+\cf0 RUNNING MEMTEST IN SAFE MODE\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\b0 \cf0 MacOS X supports booting into safe mode which is the Mac equivalent of safe mode in Windows. When booted into safe mode, all third-party extensions are disabled and only MacOS kernel extensions are running. This is a good way to isolate whether a defective third-party extension is causing instability, crashes, or kernel panics. To boot into safe mode, hold down the 
+\b shift
+\b0  key while booting the machine. Note that the shift key must be continuously held down until the MacOS X Welcome window appears with a message stating that the machine is booted into safe mode. On most Macs, booting into safe mode takes considerably longer than booting into the full operating system so the shift key must be held down for quite some time.\
+\
+An advantage of running memtest in safe mode is that more memory is available for testing than under the full operating system. However, the Quartz window manager is still running so safe mode still uses a considerable amount of memory for the graphical interface. This mode is generally recommended only for users who suspect that a bad third-party kernel extension may be the source of their problems. For all other cases, single-user mode is the best operating mode for memtest.\
+
+\b \
+
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\b \cf0 SINGLE-USER MODE NOTES
+\i \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i0\b0 \cf0 The 4.x versions of memtest run in OS X's single-user mode but there are a few things to know about this environment. Single-user mode was 
+\i\b not
+\i0\b0  intended by Apple to be a user application environment. Consequently, most features that exist in the full operating system are either missing, only partially work, or may even work somewhat differently. Virtual memory is one of those strangely-behaved features that directly affects the operation of memtest. MacOS X's gestalt manager reports that VM exists and is enabled in single-user mode, yet the default memory manager is not available in all cases. This could result in unpredictable behavior of the OS under certain conditions, particularly when memtest attempts to allocate all of the free memory for testing. Any such attempt would cause the program to become unresponsive at some point after it allocates the memory but before it locks the physical ram for its own use. The OS would also become unresponsive and a hard reset would be the only way to regain control of the machine.\
+\
+After considerable experimentation, I've found that by reducing the requested memory slightly below the available free memory, memtest can be made to work reliably in single-user mode. Based on user feedback, the requested memory is now reduced by 2.8% below the available free memory. This has eliminated reports of kernel lockups.\
+\
+In single-user mode, memtest will automatically lower the amount of memory to be tested whenever the 'all' option is used or whenever the user manually requests too much memory to be tested. The goal is to eliminate the need for the user to determine the correct amount of the reduction.  If your system locks up when requesting 
+\b all
+\b0  memory in single-user mode, you can invoke 
+\b top
+\b0 , check the amount of free memory reported, manually subtract off a bit more than 2.8%, and you should be able to get the program to run reliably. I'd appreciate any reports of lock-ups in single-user mode along with how much you needed to reduce the free memory below the amount reported by 
+\b top
+\b0  in order to get memtest to work reliably. The reduction algorithm will be updated if necessary.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\b \cf0 EXITING SINGLE-USER MODE
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+To exit single-user mode, type either the 
+\i\b reboot
+\i0\b0  command or the 
+\i\b halt
+\i0\b0  command at the unix prompt. The 
+\i\b reboot
+\i0\b0  command reboots the machine into the full operating system and is similar to restarting from the Finder. The 
+\i\b halt
+\i0\b0  command powers down the machine and is the same as shutting down the system from the Finder. These are the only recommended methods for exiting single-user mode.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qc
+
+\b \cf0 USEFUL TIPS
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+When running MacOS X in its normal (full OS) mode, you can launch multiple copies of memtest in different terminal windows to test more memory than a single copy of the program can test. This can be useful if you have a system with more ram installed than memtest can reserve for testing. Also, all Macs sold over the past several years incorporate multiple processor cores. While memtest remains a single-threaded application, it can take advantage of multiple cores if the user manually splits the total available memory reported by the top command over the number of available cores. For example, if top reports that 8000 MB of free memory is available and the machine has 4 processor cores, the user can open 4 terminal windows and launch four runs of Memtest with each run requesting 2000 MB of test memory. In this example, the following command would be issued in 3 of the 4 windows:\
+\
+>
+\b   /Applications/memtest/memtest 2000 <RETURN>
+\b0 \
+\
+In the 4th window, the user need not specify the amount of ram to test as memtest will automatically determine the remaining memory available using the following command:\
+\
+>
+\b   /Applications/memtest/memtest all <RETURN>\
+
+\b0 \
+Now, each of the four cores are testing approximately 1/4 of the available memory simultaneously. This method not only greatly reduces the testing time, but also tests the processor cache memory in all of the cores resulting in a more robust and reliable test.\
+\
+Thanks for making memtest even better for the Macintosh community!\
+
+\b \
+
+\b0 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\b \
+
+\b0 \
+Tony Scaminaci\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\i \cf0 www.memtestosx.org\
+}

@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA4DEEDA0836AE1B0036DEA6 /* memtest.c in Sources */ = {isa = PBXBuildFile; fileRef = EA4DEED80836AE1B0036DEA6 /* memtest.c */; };
+		EA4DEEDB0836AE1B0036DEA6 /* tests.c in Sources */ = {isa = PBXBuildFile; fileRef = EA4DEED90836AE1B0036DEA6 /* tests.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76FAF0486AB0100D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8DD76FB20486AB0100D96B5E /* memtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = memtest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA4DEED80836AE1B0036DEA6 /* memtest.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = memtest.c; path = source/memtest.c; sourceTree = SOURCE_ROOT; };
+		EA4DEED90836AE1B0036DEA6 /* tests.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = tests.c; path = source/tests.c; sourceTree = SOURCE_ROOT; };
+		EAFF76CA0837F53200D1CB28 /* memtest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = memtest.h; path = source/memtest.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76FAD0486AB0100D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* Memtest */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = Memtest;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EAFF76CA0837F53200D1CB28 /* memtest.h */,
+				EA4DEED80836AE1B0036DEA6 /* memtest.c */,
+				EA4DEED90836AE1B0036DEA6 /* tests.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FB20486AB0100D96B5E /* memtest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76FA90486AB0100D96B5E /* memtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAD18F5508B0141E00FC09E6 /* Build configuration list for PBXNativeTarget "memtest" */;
+			buildPhases = (
+				8DD76FAB0486AB0100D96B5E /* Sources */,
+				8DD76FAD0486AB0100D96B5E /* Frameworks */,
+				8DD76FAF0486AB0100D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = memtest;
+			productInstallPath = "$(HOME)/bin";
+			productName = Memtest;
+			productReference = 8DD76FB20486AB0100D96B5E /* memtest */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = EAD18F5908B0141E00FC09E6 /* Build configuration list for PBXProject "Memtest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* Memtest */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76FA90486AB0100D96B5E /* memtest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76FAB0486AB0100D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA4DEEDA0836AE1B0036DEA6 /* memtest.c in Sources */,
+				EA4DEEDB0836AE1B0036DEA6 /* tests.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EAD18F5608B0141E00FC09E6 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				"DEPLOYMENT_LOCATION[sdk=macosx*]" = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "/tmp/.dst\n";
+				"DSTROOT[sdk=macosx*]" = /tmp/.dst;
+				GCC_ALTIVEC_EXTENSIONS = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				"GCC_VERSION_i386[sdk=macosx*][arch=i386]" = "";
+				"GCC_VERSION_x86_64[sdk=macosx*][arch=x86_64]" = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/Software_Development/Memtest_4.23/DerivedData/Memtest/Build/Products/Development";
+				"INSTALL_PATH[sdk=*]" = "$(HOME)/Software_Development/Memtest_4.23/DerivedData/Memtest/Build/Products/Development";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET[sdk=macosx*]" = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET_i386[sdk=macosx*][arch=i386]" = "";
+				"MACOSX_DEPLOYMENT_TARGET_x86_64[sdk=macosx*][arch=x86_64]" = "";
+				PRODUCT_NAME = memtest;
+				"SDKROOT_i386[sdk=macosx*][arch=i386]" = "";
+				"SDKROOT_x86_64[sdk=macosx*][arch=x86_64]" = "";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wconversion",
+				);
+				ZERO_LINK = YES;
+				"ZERO_LINK[arch=*]" = YES;
+			};
+			name = Development;
+		};
+		EAD18F5708B0141E00FC09E6 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				"DEPLOYMENT_LOCATION[sdk=macosx*]" = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "/tmp/.dst\n";
+				"DSTROOT[sdk=macosx*]" = /tmp/.dst;
+				GCC_ALTIVEC_EXTENSIONS = NO;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_STRICT_ALIASING = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION_i386 = 4.0;
+				"GCC_VERSION_i386[sdk=macosx*][arch=i386]" = 4.0;
+				GCC_VERSION_ppc = 4.0;
+				GCC_VERSION_ppc64 = 4.0;
+				GCC_VERSION_x86_64 = 4.0;
+				"GCC_VERSION_x86_64[sdk=macosx*][arch=x86_64]" = 4.0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/Software_Development/Memtest_4.23/DerivedData/Memtest/Build/Products/Deployment";
+				"INSTALL_PATH[sdk=*]" = "$(HOME)/Software_Development/Memtest_4.23/DerivedData/Memtest/Build/Products/Deployment";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET[sdk=macosx*]" = 10.6;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET_i386[sdk=macosx*][arch=i386]" = 10.6;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc64 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET_x86_64[sdk=macosx*][arch=x86_64]" = 10.6;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Wconversion",
+				);
+				PRODUCT_NAME = memtest;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				"SDKROOT_i386[sdk=macosx*][arch=i386]" = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc64 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_x86_64 = /Developer/SDKs/MacOSX10.4u.sdk;
+				"SDKROOT_x86_64[sdk=macosx*][arch=x86_64]" = /Developer/SDKs/MacOSX10.4u.sdk;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wconversion",
+				);
+				ZERO_LINK = NO;
+				"ZERO_LINK[arch=*]" = YES;
+			};
+			name = Deployment;
+		};
+		EAD18F5808B0141E00FC09E6 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				"DEPLOYMENT_POSTPROCESSING[sdk=macosx*]" = YES;
+				DSTROOT = "/tmp/.dst\n";
+				"DSTROOT[sdk=macosx*]" = /tmp/.dst;
+				GCC_ALTIVEC_EXTENSIONS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				"GCC_VERSION_i386[sdk=macosx*][arch=i386]" = "";
+				"GCC_VERSION_x86_64[sdk=macosx*][arch=x86_64]" = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(HOME)/Software_Development/Memtest_4.23/DerivedData/Memtest/Build/Products/Development";
+				"INSTALL_PATH[sdk=*]" = "$(HOME)/Software_Development/Memtest_4.23/DerivedData/Memtest/Build/Products/Development";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET[sdk=macosx*]" = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET_i386[sdk=macosx*][arch=i386]" = 10.6;
+				"MACOSX_DEPLOYMENT_TARGET_x86_64[sdk=macosx*][arch=x86_64]" = 10.6;
+				PRODUCT_NAME = memtest;
+				"SDKROOT[arch=*]" = "";
+				"SDKROOT_i386[sdk=macosx*][arch=i386]" = "";
+				"SDKROOT_x86_64[sdk=macosx*][arch=x86_64]" = "";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wconversion",
+				);
+				"ZERO_LINK[arch=*]" = "";
+			};
+			name = Default;
+		};
+		EAD18F5A08B0141E00FC09E6 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				"VALID_ARCHS[sdk=macosx*]" = "i386 x86_64";
+			};
+			name = Development;
+		};
+		EAD18F5B08B0141E00FC09E6 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEPLOYMENT_LOCATION = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 4.0;
+				GCC_VERSION_ppc64 = 4.0;
+				GCC_VERSION_x86_64 = 4.0;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.6;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc64 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_x86_64 = 10.6;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Wconversion",
+				);
+				SDKROOT_i386 = /Developer_326/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer_326/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc64 = /Developer_326/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_x86_64 = /Developer_326/SDKs/MacOSX10.4u.sdk;
+				"VALID_ARCHS[sdk=*]" = "i386 x86_64";
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		EAD18F5C08B0141E00FC09E6 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=macosx*]" = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEPLOYMENT_LOCATION = YES;
+				"DEPLOYMENT_POSTPROCESSING[sdk=macosx*]" = YES;
+				"INSTALL_PATH[sdk=*]" = "";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				"VALID_ARCHS[sdk=macosx*]" = "i386 x86_64";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAD18F5508B0141E00FC09E6 /* Build configuration list for PBXNativeTarget "memtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD18F5608B0141E00FC09E6 /* Development */,
+				EAD18F5708B0141E00FC09E6 /* Deployment */,
+				EAD18F5808B0141E00FC09E6 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+		EAD18F5908B0141E00FC09E6 /* Build configuration list for PBXProject "Memtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD18F5A08B0141E00FC09E6 /* Development */,
+				EAD18F5B08B0141E00FC09E6 /* Deployment */,
+				EAD18F5C08B0141E00FC09E6 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

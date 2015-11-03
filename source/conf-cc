@@ -1,0 +1,3 @@
+cc -Wall -O3 -DPOSIX -c
+
+This will be used to compile .c files.
